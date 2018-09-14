@@ -1,0 +1,28 @@
+@import "popup.css";
+@import "button.css";
+@import "toolbar.css";
+
+@import "Guestbook.css";
+
+@import "startup.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #3A6EA5;
+}
+
+.popup {
+    visibility: hidden;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+

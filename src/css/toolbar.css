@@ -1,0 +1,30 @@
+#toolbar {
+    height: 30px;
+    background-color: #D4D0C8;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#toolbar button {
+    background-color: #D4D0C8;
+    border: none;
+    border-right: 2px solid #808080;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid #808080;
+    height: 100%;
+    margin: 0;
+}
+
+#toolbar button.closed {
+    border: inset;
+}
+
+#toolbar button.opend {
+    border-right: 2px solid #808080;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid #808080;
+    border: outset;
+}

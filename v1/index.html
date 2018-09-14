@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guestbook by Johannes Przymusinski</title>
+
+    <!--<link rel="stylesheet" href="src/css/main.css">-->
+    <link rel="stylesheet" href="src/css/win2000-theme/main.css">
+
+</head>
+<body id="body">
+<div id="application">
+
+    <header>
+        <img src="assets/icon.png" alt="Icon">
+        <h2>Guestbook</h2>
+        <button id="header-btn-close" class="header-button">X</button>
+        <button id="header-btn-min" class="header-button">□</button>
+        <button id="header-btn-max" class="header-button" onclick="window.close()">_</button>
+        <!--<small>by Johannes Przymusinski</small>-->
+    </header>
+
+    <div id="actions">
+        <div id="actions-border">
+            <button class="action" id="action-newEntry">New Entry</button>
+            <button class="action" id="action-refresh">Refresh</button>
+        </div>
+    </div>
+
+
+    <div id="newEntry" class="hidden">
+
+        <fieldset class="entry">
+            <legend>New Entry</legend>
+
+            <label for="entryTitle">Title: </label>
+            <input type="text" id="entryTitle" name="postTitle">
+            <br>
+            <label for="entryContent">Content:</label> <br>
+            <textarea name="postContent" id="entryContent" cols="39" rows="10" spellcheck="true"></textarea>
+            <button id="submitEntry">Add Entry</button>
+            <button id="clearForm">Clear</button>
+        </fieldset>
+
+    </div>
+    <div id="content">
+
+    </div>
+</div>
+
+</body>
+
+<script src="../node_modules/@jojopr/miniajax/dist/miniAJAX.js"></script>
+
+<script src="src/js/main.js" type="module"></script>
+
+</html>

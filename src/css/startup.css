@@ -1,0 +1,111 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+#startup {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: black;
+    position: relative;
+}
+
+#screen1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    font-family: "Courier New";
+    text-align: center;
+}
+
+#screen2 {
+    background-color: #3A6EA5;
+    height: 100vh;
+    width: 100vw;
+}
+
+#startup-popup {
+    visibility: visible;
+    width: 500px;
+    height: 170px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: default;
+}
+
+#loadingbar {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    border-top: dashed 10px white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#popup-loadingbar {
+    width: 100%;
+    height: 10px;
+    background-color: #9EC0DA;
+}
+
+#popup-windows-statustext {
+    color: black;
+    margin-top: 12px;
+    margin-left: 4px;
+}
+
+#loadingbar-fill {
+    margin-top: 5px;
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    animation-name: fill-loadingbar;
+    animation-duration: 10s;
+}
+
+.animatedGradient {
+    background: linear-gradient(to right,  #9ec0da 0%, #60a8d9 20%, #025889 40%, #013755 50%, #025889 60%, #60a8d9 80%, #9ec0da 100%);
+    width:100%;
+    height:10px;
+    background-size: auto 200%;
+    background-position: 0 100%;
+    animation: gradient 3s infinite;
+    animation-fill-mode:forwards;
+    animation-timing-function: linear;
+
+}
+
+#bluescreen {
+    background-color: #0a246a;
+    height: 100vh;
+    display: none;
+}
+
+#bluescreen p {
+    font-family: "Courier New";
+    font-size: 24px;
+}
+
+#bluescreen .bluescreen-reason {
+    margin-left: 5em;
+}
+
+@keyframes fill-loadingbar {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+
+}

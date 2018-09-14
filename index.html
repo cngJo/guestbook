@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guestbook</title>
+
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="lib/jquery-ui.css">
+
+</head>
+<body>
+
+<div id="desktop">
+
+    <div id="toolbar">
+        <button class="toolbar-start-button">Start</button>
+        <button class="toolbat-application-button" id="toolbar-application-guestbook">
+            <img src="assets/icon.png" alt="Guestbook-Icon" title="Guestbook"/>
+            &nbsp;Guestbook
+        </button>
+    </div>
+
+    <div class="popup" id="application-guestbook">
+
+        <header class="popup-header">
+            <img class="popup-icon" src="assets/icon.png" alt="Guestbook-Icon">
+            <h2 class="popup-title">Guestbook</h2>
+            <button class="header-button" id="header-guestbookMain-button-close">X</button>
+            <button class="header-button" id="header-guestbookMain-button-min">-</button>
+        </header>
+
+        <div class="popup-content">
+            <div id="newEntry">
+                <button class="applicationButton" id="newEntryButton">new Entry</button>
+                <fieldset id="newEntryFieldset">
+                    <legend id="guestbook-newEntry-Legend">New Entry</legend>
+                    <p>Title: </p>
+                    <input type="text" name="entry_title" id="input_entry-title" title="title" spellcheck="false">
+                    <p>Content: </p>
+                    <textarea name="entry_content" id="input_entry-content" cols="60" rows="10"
+                              spellcheck="false"></textarea>
+                    <button class="application-button" id="guestbook-newEntry-submit">Submit</button>
+                    <button class="application-button" id="guestbook-newEntry-clear">Clear</button>
+                </fieldset>
+            </div>
+
+            <fieldset id="entries">
+                <legend>Entries</legend>
+                <div id="entriesContainer"></div>
+            </fieldset>
+        </div>
+
+    </div>
+</div>
+
+<div id="startup">
+    <div id="screen1">
+        <div id="headline">Starting Windows...</div>
+        <div id="loadingbar"></div>
+        <div id="loadingbar-fill"></div>
+        <div id="subtitle">For troubleshooting and advanced startup options for Windows 2000, press F12.</div>
+    </div>
+
+    <div id="screen2">
+
+        <div class="popup" id="startup-popup">
+            <header class="popup-header">
+                <h2 class="popup-title">Please wait...</h2>
+            </header>
+
+            <div class="popup-content">
+                <img src="assets/windows-startup.png" alt="Windows 2000 Pro. Startup">
+                <div id="popup-loadingbar" class="animatedGradient"></div>
+                <p id="popup-windows-statustext">Windows is starting up ...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="bluescreen">
+        <p>Error starting Windows 2000 Professional</p>
+        <br>
+        <p>Not able to load Error Messages</p>
+        <br>
+        <p>Reasons for not Booting:</p>
+        <br>
+        <p class="bluescreen-reason">Windows 2000 is not Windows 2000 without our random error messages</p>
+    </div>
+
+</div>
+
+</body>
+
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="lib/jquery-ui.js"></script>
+
+<script src="node_modules/@jojopr/miniajax/dist/miniAJAX.js"></script>
+
+<script src="src/js/startup.js"></script>
+<script src="src/js/main.js" type="module"></script>
+<script src="src/js/application-guestbook.js" type="module"></script>
+
+</html>

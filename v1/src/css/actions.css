@@ -1,0 +1,12 @@
+#actions {
+    text-align: center;
+}
+
+#actions fieldset {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.action {
+    margin-bottom: 10px;
+}

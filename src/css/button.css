@@ -1,0 +1,45 @@
+.header-button {
+    float: right;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    padding: 0;
+    margin-top: 2px;
+    margin-right: 2px;
+    background-color: #D4D0C8;
+    cursor: pointer;
+}
+
+.header-button:active {
+    border: inset;
+}
+
+.toolbar-button {
+    height: 16px;
+    width: auto;
+    background-color: #D4D0C8;
+    font-size: 12px;
+    padding: 0;
+    font-family: "Courier New";
+    border: none;
+}
+
+.toolbar-button:active {
+    border-top: 1px solid white!important;
+    border-left: 1px solid white!important;
+    border-bottom: 1px solid #404040!important;
+    border-right: 1px solid #404040!important;
+    border: inset;
+}
+
+button {
+    background-color: #D4D0C8;
+    margin-left: 4px;
+    border-style: outset;
+    border-color: #fff;
+}
+
+button:active {
+    border-style: inset;
+    border-color: #fff;
+}

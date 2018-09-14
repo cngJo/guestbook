@@ -1,0 +1,119 @@
+.popup {
+    width: 500px;
+    height: 300px;
+    position: fixed;
+    background-color: #D4D0C8;
+    border: 2px solid white;
+    border-bottom: 2px solid #808080;
+    border-right: 2px solid #808080;
+    left: 20px;
+    top: 40px;
+    pointer-events: none;
+}
+
+.popup:before {
+    content: ' ';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    bottom: -4px;
+    right: -4px;
+    border: 2px solid #D4D0C8;
+    border-bottom: 2px solid #404040;
+    border-right: 2px solid #404040;
+}
+
+.popup-header {
+    display: block;
+    height: 24px;
+    background: #0a246a;
+    background: -moz-linear-gradient(left, #0a246a 0%, #a6caf0 100%);
+    background: -webkit-linear-gradient(left, #0a246a 0%, #a6caf0 100%);
+    background: linear-gradient(to right, #0a246a 0%, #a6caf0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a246a', endColorstr='#a6caf0', GradientType=1);
+    cursor: pointer;
+    line-height: 16px;
+    border: 2px solid #D4D0C8;
+    pointer-events: auto;
+}
+
+.popup-icon {
+    margin-left: 2px;
+    margin-top: 2px;
+    float: left;
+    position: relative;
+}
+
+.popup-title {
+    margin: 0;
+    margin-top: 2px;
+    margin-left: 2px;
+    font-size: 16px;
+    font-family: "Courier New";
+    position: relative;
+    float: left;
+    display: block;
+    color: white;
+}
+
+.popup-toolbar {
+    height: 20px;
+    width: auto;
+    margin-left: 4px;
+    border: 2px solid white;
+    border-bottom: 2px solid #808080;
+    position: fixed;
+    pointer-events: auto;
+}
+
+.popup-toolbar:before {
+    content: ' ';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    bottom: -4px;
+    right: -4px;
+    border: 2px solid #808080;
+    border-bottom: 2px solid white;
+}
+
+.popup-content {
+    height: calc(100% - 24px);
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch
+}
+
+textarea {
+    resize: none;
+}
+
+#newEntryButton {
+    display: block;
+}
+
+#newEntryFieldset {
+    display: none;
+
+}
+
+#entries {
+    display: block;
+    flex: 1;
+    position: relative;
+    padding-right: 1px;
+}
+
+#entriesContainer {
+    position: absolute;
+    height: calc(100% - 28px);
+    width: calc(100% - 19px);
+    overflow-y: auto;
+}
+
+.toolbar-button {
+    margin-top: 2px;
+    margin-left: 2px;
+    pointer-events: auto;
+}
