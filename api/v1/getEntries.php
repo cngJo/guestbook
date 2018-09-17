@@ -49,6 +49,6 @@ function JSONify($posts) {
 
     $json .= '}'; // must be last line before echo
 
-    echo $json;
+    echo nl2br($json);
 }
 
