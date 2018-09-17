@@ -3,7 +3,7 @@ import {TimeRendering} from "./TimeRendering.js";
 // renders the time as (hh:mm) to all html elements with the class render-time
 TimeRendering.render();
 
-loadDesktop();
+boot();
 
 let GuestbookMain = document.getElementById('application-guestbook');
 let GuestbookNewEntry = document.getElementById('application-guestbook-newEntry');
