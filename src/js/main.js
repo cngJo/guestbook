@@ -34,7 +34,6 @@ ToolbarButtonGuestbook.addEventListener('click', (event) => {
         ToolbarButtonGuestbook.classList.remove('closed');
         ToolbarButtonGuestbook.classList.add('opend');
     }
-    ToolbarButtonGuestbook.style.backgroundColor = 'transparent';
 });
 
 GuestbookMainCloseButton.addEventListener('click', (event) => {
@@ -44,7 +43,6 @@ GuestbookMainCloseButton.addEventListener('click', (event) => {
 
 GuestbookMainMinButton.addEventListener('click', (event) => {
     GuestbookMain.style.visibility = 'hidden';
-    ToolbarButtonGuestbook.style.backgroundColor = 'green';
 });
 
 document.body.addEventListener('keypress', (event) => {

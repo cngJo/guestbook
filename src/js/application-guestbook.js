@@ -1,4 +1,5 @@
 import {Entry} from "./Entry.js";
+import {Time} from "./Time.js";
 
 let entires = document.getElementById('entriesContainer');
 
@@ -43,6 +44,7 @@ function getEntries() {
     AJAX.GET('http://localhost/guestbook/api/v1/getEntries.php?id=all', {
         '200': function(data) {
             let DataPosts = JSON.parse(data).entries;
+            console.log(DataPosts);
             posts = [];
             DataPosts.forEach((post, index) => {
                 posts.push(new Entry(post.id, post.title, post.content, post.createdAt))
@@ -54,7 +56,7 @@ function getEntries() {
 
 function addEntry(title, content) {
     if (title !== '' && content !== '') {
-        AJAX.GET('http://127.0.0.1/guestbook/api/v1/addEntry.php?title=' + title + '&content=' + content + '&createdAt=' + new Date().toLocaleString(),
+        AJAX.GET('http://127.0.0.1/guestbook/api/v1/addEntry.php?title=' + title + '&content=' + content + '&createdAt=' + Time.getDateString(),
             {
                 '200': function(data) { getEntries(); },
             });
